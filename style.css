@@ -1,0 +1,36 @@
+:root{
+  --bg:#0f1115; --surface:#171a20; --line:#262b33; --text:#e8ebef;
+  --muted:#8b93a0; --accent:#4fb3ff;
+  --head:'Segoe UI',Roboto,system-ui,sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--head);line-height:1.5;}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px;}
+nav.top{border-bottom:1px solid var(--line);padding:18px 0;}
+nav.top .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+nav.top a{color:var(--text);text-decoration:none;margin-left:20px;font-size:15px;}
+nav.top a:first-child{margin-left:0;font-weight:600;color:var(--accent);}
+nav.top a:hover{color:var(--accent);}
+main{padding:48px 0;}
+h1{font-size:30px;margin:0 0 8px;}
+p.sub{color:var(--muted);margin:0 0 32px;}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px;}
+th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+.grade{font-weight:600;color:var(--accent);}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
+.card h3{margin:0 0 8px;font-size:16px;}
+.card .meta{color:var(--muted);font-size:13px;margin-bottom:10px;}
+.tag{display:inline-block;background:rgba(79,179,255,.1);color:var(--accent);border:1px solid rgba(79,179,255,.3);font-size:12px;padding:3px 8px;border-radius:5px;margin:2px 4px 0 0;}
+.badge{display:inline-block;font-size:12px;background:rgba(255,255,255,.06);color:var(--muted);padding:3px 8px;border-radius:5px;}
+.error{background:#3a1d1d;border:1px solid #6b2c2c;color:#ffb4b4;padding:14px 18px;border-radius:8px;}
+footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);font-size:13px;}
+@media (max-width:600px){
+  table, thead, tbody, th, td, tr{display:block;}
+  thead{display:none;}
+  tr{border-bottom:1px solid var(--line);padding:10px 0;}
+  td{border:none;padding:4px 16px;}
+  td::before{content:attr(data-label);display:block;color:var(--muted);font-size:11px;text-transform:uppercase;}
+}

@@ -1,0 +1,8 @@
+{
+    "name": "akshat/student-portfolio",
+    "description": "Student portfolio app: RDS MySQL (academic.php) + DynamoDB (skills.php) on EC2",
+    "require": {
+        "php": ">=8.0",
+        "aws/aws-sdk-php": "^3.0"
+    }
+}
